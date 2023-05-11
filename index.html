@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HW JS 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="text-center py-5">BÀI TẬP JS BUỔI 6</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="d-flex align-items-start p-1">
+          <div
+            class="nav flex-column nav-pills"
+            style="width: 10%"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <!--! btnBai1 -->
+            <button
+              class="nav-link shadow my-2 active"
+              id="v-pills-bai1-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-bai1"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-bai1"
+              aria-selected="true"
+            >
+              Bài 1
+            </button>
+            <!--! btnBai2 -->
+            <button
+              class="nav-link my-2 shadow"
+              id="v-pills-bai2-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-bai2"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-bai2"
+              aria-selected="false"
+            >
+              Bài 2
+            </button>
+            <!--! btnBai3 -->
+            <button
+              class="nav-link my-2 shadow"
+              id="v-pills-bai3-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-bai3"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-bai3"
+              aria-selected="false"
+            >
+              Bài 3
+            </button>
+            <!--! btnBai4 -->
+            <button
+              class="nav-link my-2 shadow"
+              id="v-pills-bai4-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-bai4"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-bai4"
+              aria-selected="false"
+            >
+              Bài 4
+            </button>
+            <!--! btnBai5 -->
+            <button
+              class="nav-link my-2 shadow"
+              id="v-pills-bai5-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-bai5"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-bai5"
+              aria-selected="false"
+            >
+              Bài 5
+            </button>
+          </div>
+          <!--! -------------------- Content -------------------- -->
+          <div
+            class="tab-content w-100 d-flex justify-content-center"
+            id="v-pills-tabContent"
+          >
+            <!--! content bai 1 -->
+            <div
+              class="tab-pane fade show active w-75"
+              id="v-pills-bai1"
+              role="tabpanel"
+              aria-labelledby="v-pills-bai1-tab"
+              tabindex="0"
+            >
+              <h2 class="text-center pb-5 m-auto">
+                Tìm số nguyên dương nhỏ nhất sao cho tổng các số từ 1 đến số
+                nguyên dương đó lớn hơn số đã nhập
+              </h2>
+              <!--! -------------------- Nhập điểm -------------------- -->
+              <div class="text-center w-50 m-auto">
+                <!--! Nhập giá trị lớn nhất -->
+                <div class="mb-3 me-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="gtMax"
+                    aria-describedby="helpId"
+                    placeholder="Giá trị lớn nhất"
+                  />
+                </div>
+              </div>
+
+              <!--! -------------------- btn kết quả -------------------- -->
+              <div class="text-center w-50 m-auto">
+                <button
+                  class="btn btn-primary w-100 my-3"
+                  onclick="timSNDMin()"
+                >
+                  Kết quả
+                </button>
+              </div>
+              <!--! -------------------- hienThi kết quả -------------------- -->
+              <div
+                class="hienSNDMin rounded bg-primary bg-opacity-75 p-4 w-50 m-auto text-white text-center"
+              ></div>
+              <!--! --------------------- -->
+            </div>
+            <!--! content bai 2 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-bai2"
+              role="tabpanel"
+              aria-labelledby="v-pills-bai2-tab"
+              tabindex="0"
+            >
+              <h2 class="text-center py-2">Tính tổng dãy x mũ n số</h2>
+              <!--! -------------------- Nhập điểm -------------------- -->
+              <div class="text-center">
+                <!--! Nhập x -->
+                <div class="mb-3 me-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="x"
+                    aria-describedby="helpId"
+                    placeholder="Nhập x"
+                  />
+                </div>
+                <!--! Nhập n -->
+                <div class="mb-3 me-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="n"
+                    aria-describedby="helpId"
+                    placeholder="Nhập n"
+                  />
+                </div>
+              </div>
+              <!--! -------------------- btn kết quả -------------------- -->
+              <div class="text-center">
+                <button
+                  class="btn btn-primary w-100 my-3"
+                  onclick="tinhTongSn()"
+                >
+                  Tính
+                </button>
+              </div>
+              <!--! -------------------- hienThi kết quả -------------------- -->
+              <div
+                class="htTongSn rounded bg-primary bg-opacity-75 p-4 text-white text-center"
+              ></div>
+              <!--! --------------------- -->
+            </div>
+            <!--! content bai 3 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-bai3"
+              role="tabpanel"
+              aria-labelledby="v-pills-bai3-tab"
+              tabindex="0"
+            >
+              <h2 class="text-center py-2">Tính giai thừa</h2>
+              <!--! -------------------- Nhập điểm -------------------- -->
+              <div class="text-center">
+                <!--! Nhập n -->
+                <div class="mb-3 me-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="nGT"
+                    aria-describedby="helpId"
+                    placeholder="Nhập n"
+                  />
+                </div>
+              </div>
+              <!--! -------------------- btn kết quả -------------------- -->
+              <div class="text-center">
+                <button
+                  class="btn btn-primary w-100 my-3"
+                  onclick="tinhGiaiThua()"
+                >
+                  Tính
+                </button>
+              </div>
+              <!--! -------------------- hienThi kết quả -------------------- -->
+              <div
+                class="htGiaiThua rounded bg-primary bg-opacity-75 p-4 text-white text-center"
+              ></div>
+              <!--! --------------------- -->
+            </div>
+            <!--! content bai 4 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-bai4"
+              role="tabpanel"
+              aria-labelledby="v-pills-bai4-tab"
+              tabindex="0"
+            >
+              <h2 class="text-center py-2">In thẻ div</h2>
+              <div id="baiFourBody"></div>
+
+              <!--! -------------------- btn -------------------- -->
+              <div class="text-center">
+                <button class="btn btn-primary w-100 my-3" onclick="showDiv()">
+                  BUTTON
+                </button>
+              </div>
+              <!--! --------------------- -->
+            </div>
+            <!--! content bai 5 -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-bai5"
+              role="tabpanel"
+              aria-labelledby="v-pills-bai3-tab"
+              tabindex="0"
+            >
+              <h2 class="text-center py-2">Tìm số nguyên tố từ 1 đến n</h2>
+              <!--! -------------------- Nhập điểm -------------------- -->
+              <div class="text-center">
+                <!--! Nhập n -->
+                <div class="mb-3 me-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name=""
+                    id="nSNT"
+                    aria-describedby="helpId"
+                    placeholder="Nhập n"
+                  />
+                </div>
+              </div>
+              <!--! -------------------- btn kết quả -------------------- -->
+              <div class="text-center">
+                <button class="btn btn-primary w-100 my-3" onclick="timSNT()">
+                  Tính
+                </button>
+              </div>
+              <!--! -------------------- hienThi kết quả -------------------- -->
+              <div
+                class="htSNT rounded bg-primary bg-opacity-75 d-inline-block w-100 p-1 text-white text-center"
+                style="height: 37px"
+              ></div>
+              <!--! --------------------- -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
