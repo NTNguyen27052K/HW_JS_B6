@@ -122,39 +122,6 @@ xát định dc số nguyên tố thì thêm số vào mảng.
 !output:
 số nguyên tố từ 1 đến n
  */
-// function checkSNT(numBer) {
-//   if (numBer < 2) {
-//     return "Không có số nguyên tố nào!";
-//   } else {
-//     var snt = 1;
-//     for (var i = 2; i <= Math.sqrt(numBer); i++) {
-//       if (numBer % i == 0) {
-//         snt = 0;
-//         break;
-//       } else {
-//         snt = 1;
-//       }
-//     }
-//     return snt;
-//   }
-// }
-
-// function timSNT() {
-//   var arr = [];
-//   var nSNT = Number(document.getElementById("nSNT").value);
-//   console.log(nSNT);
-//   if (nSNT < 2) {
-//     arr = "Không có số nguyên tố nào!";
-//   } else {
-//     for (var i = 1; i <= nSNT; i++) {
-//       if (checkSNT(i) == 1) {
-//         arr.push(i);
-//       }
-//     }
-//   }
-//   document.querySelector(".htSNT").innerHTML = arr;
-// }
-
 function checkSNT(numBer) {
   if (numBer < 2) {
     return 0;
@@ -175,13 +142,15 @@ function checkSNT(numBer) {
 function timSNT() {
   var arr = [];
   var nSNT = Number(document.getElementById("nSNT").value);
-  debugger;
   if (nSNT < 2) {
-    arr = "Không có số nguyên tố nào!";
-  }
-  for (var i = 1; i <= nSNT; i++) {
-    if (checkSNT(i) == 1) {
-      arr.push(i);
+    arr = "Không có số nguyên tố nào tồn tại!";
+  } else {
+    for (var i = 2; i <= nSNT; i++) {
+      if (checkSNT(i) == 1) {
+        arr.push(i);
+      } else {
+        continue;
+      }
     }
   }
   document.querySelector(".htSNT").innerHTML = arr;
